@@ -3,6 +3,7 @@ import Abstract.CustomerCheckManager;
 
 import Concrete.NeroCustomerManager;
 import Concrete.StarbucksCustomerManager;
+import Concrete.DunkinDonutsCustomerManager;
 import Entities.Customer;
 
 import java.time.LocalDate;
@@ -18,9 +19,9 @@ public class MainCustomerManager {
         customerManagerStarBucks.Save(new Customer(102,"Ahmet","Parlak", LocalDate.of(1995,7,13)));
         System.out.println();
 
-
-
-
+        BaseCustomerManager customerManagerDunkinDonuts = new DunkinDonutsCustomerManager();
+        customerManagerDunkinDonuts.Save(new Customer(103,"Mehmet","Candemir", LocalDate.of(2001,12,25)));
+        System.out.println();
     }
 
 }
